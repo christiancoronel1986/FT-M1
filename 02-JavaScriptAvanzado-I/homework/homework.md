@@ -13,15 +13,15 @@ var b = 10;
 var c = function (a, b, c) {
    var x = 10;
    console.log(x);//10 
-   console.log(a);//5
+   console.log(a);//8
    var f = function (a, b, c) {
       b = a;
-      console.log(b);//5
+      console.log(b);//8
       b = c;
       var x = 5;
    };
    f(a, b, c);
-   console.log(b);//5
+   console.log(b);//9
 };
 c(8, 9, 10);
 console.log(b);//10
@@ -33,7 +33,7 @@ console.log(bar);//indfinido
 console.log(baz);//baz is not defined
 foo();
 function foo() {
-   console.log('Hola!');//'Hola!'
+   console.log('Hola!');//
 }
 var bar = 1;
 baz = 2;
@@ -90,9 +90,9 @@ parseInt("09")//9
 2 && 5 //5
 5 || 0 //5 
 0 || 5 // 5 
-[3]+[3]-[10] //-4
-3>2>1 //true
-[] == ![] //false
+[3]+[3]-[10] //23
+3>2>1 //false
+[] == ![] //true
 ```
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
