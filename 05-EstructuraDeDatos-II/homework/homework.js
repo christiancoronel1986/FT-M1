@@ -111,6 +111,7 @@ HashTable.prototype.hash = function (key){
 }
 
 HashTable.prototype.set = function(key,value){
+  if(typeof key !== 'string') throw TypeError ("Debe se un string")
   var index = this.hash(key);
  // this.buckets[index] = {[key]: value};
   if(!this.buckets[index]){
